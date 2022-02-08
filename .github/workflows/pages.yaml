@@ -17,6 +17,8 @@ jobs:
           node-version: "16"
 
       - name: Build Muslim Site
+        env:
+          NODE_ENV: ghpages
         run: npm install && npm run build
 
       - name: Deploy Muslim Site to Github Pages
